@@ -8,7 +8,7 @@ const CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertil
 
 CartoDB_Voyager.addTo(map)
 
-// add geoJSON polygons layer*
+// add geoJSON polygons layer
 async function addDistrictsGeoJson(url) {
   const response = await fetch(url)
   const data = await response.json()
@@ -17,8 +17,9 @@ async function addDistrictsGeoJson(url) {
   })
   polygons.addTo(map)
 }
-addDistrictsGeoJson('tartu_city_districts_edu.geojson')
+addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
 
+// add popup to each feature
 function popUPinfo(feature, layer) {
   layer.bindPopup(feature.properties.NIMI)
 }
