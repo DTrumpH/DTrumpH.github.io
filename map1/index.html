@@ -3,6 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <!-- Styling of marker cluster plugin -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <!--  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web GIS</title>
     <link rel="stylesheet" href="css/styles.css" />
@@ -24,8 +28,12 @@
     </div>
 
     <div class="container">
+        <button onclick="defaultMapSettings()">Default</button>
         <div id="map">
             <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+            <!-- script of marker cluster plugin -->
+            <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+            <!--  -->
         </div>
     </div>
 
