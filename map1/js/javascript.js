@@ -17,7 +17,7 @@ async function addDistrictsGeoJson(url) {
   })
   polygons.addTo(map)
 }
-addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
+addDistrictsGeoJson('map1/geojson/tartu_city_districts_edu.geojson')
 
 // add popup to each feature
 function popUPinfo(feature, layer) {
