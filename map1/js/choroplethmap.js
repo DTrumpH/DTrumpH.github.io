@@ -24,8 +24,8 @@ async function addChoroplethGeoJson(url) {
             },
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
-                    '<strong>District:</strong> ' + feature.properties.NIMI + 
-                    '<br><strong>Towers:</strong> ' + feature.properties.TOWERS
+                    'District: ' + feature.properties.NIMI + 
+                    '<br>Towers: ' + feature.properties.TOWERS
                 );
             },
         }).addTo(map);
