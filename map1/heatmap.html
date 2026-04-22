@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatmap</title> 
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div class="banner">
+        <img src="img/banner.jpg" alt="Landscape Banner">
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html">Basic Map</a> 
+        <a href="heatmap.html" class="active">Heatmap</a> 
+        <a href="choroplethmap.html">Choropleth Map</a>
+    </nav>
+
+    <div class="title-container">
+        <h1>Cell tower density heatmap</h1>
+    </div>
+
+    <div class="container">
+        <button onclick="defaultMapSettings()">Default</button>
+        <div id="map"></div>
+    </div>
+
+    <footer>
+        &copy; Daniel Trump, University of Tartu, 2026
+    </footer>
+
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.min.js"></script>
+    <script src="js/heatmap.js"></script>
+</body>
+</html>
