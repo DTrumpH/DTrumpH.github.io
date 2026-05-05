@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tartu map application</title>
     
-    <!-- CSS Libraries -->
+    <!-- CSS Libs -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
@@ -13,18 +13,33 @@
 </head>
 <body>
 
+    <div id="info-box" style="display: none;">
+    <div id="info-header">
+        <h4>Query Results</h4>
+        <button id="info-close">x</button>
+    </div>
+    <div id="info-content">Click on the map to get feature info</div>
+    </div>
+
     <div class="map-title">Tartu map application</div>
-    <button class="default-button" onclick="defaultMapSettings()">Default view</button>
+    <button id="applySettingsButton" class="default-button">Default View</button>
     
     <div id="map"></div>
 
-    <!-- JavaScript Libraries -->
+    <!-- js libs -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-choropleth@1.1.4/dist/choropleth.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.min.js"></script>
+    <!-- turf libs -->
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
 
-    <!-- Custom Code -->
-    <script src="js/appCode.js"></script>
+    <!-- appcode -->
+    <script type="module" src="js/appCode.js"></script>
+
+    <script type="module">
+        import { defaultMapSettings } from "/js/appCode.js"
+        document.getElementById("applySettingsButton").addEventListener("click", defaultMapSettings)
+    </script>
 </body>
 </html>
