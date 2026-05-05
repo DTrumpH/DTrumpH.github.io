@@ -1,4 +1,4 @@
-import { pointsCollection } from "./Points.js"
+import { pointsCollection } from "/Points.js"
 
 export function turfFunctions(map) {
   console.log('Turf module loaded successfully')
