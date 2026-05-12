@@ -45,4 +45,20 @@ export function turfFunctions(map) {
   map.on('click', function(event) {
     console.log(`[${event.latlng.lng}, ${event.latlng.lat}]`)
   })
+
+  const collection = turf.featureCollection([myPoint, myLine, myPolygon]);
+  const centerPoint = turf.center(collection);
+  
+  console.log("unique Turf function center of features:", centerPoint.geometry.coordinates);
+
+  // marker at the calculated center
+  L.geoJSON(centerPoint, {
+      pointToLayer: (f, latlng) => L.circleMarker(latlng, {
+          radius: 8, 
+          fillColor: 'yellow', 
+          color: 'black', 
+          weight: 2, 
+          fillOpacity: 1
+      })
+  }).addTo(map).bindPopup("calculated center of turf geometries");
 }

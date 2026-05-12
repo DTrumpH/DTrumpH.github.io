@@ -27,21 +27,6 @@ body {
     font-weight: bold;
 }
 
-.default-button {
-    position: absolute;
-    top: 185px; 
-    left: 10px;
-    z-index: 1001;
-    padding: 8px 0px;
-    width: 156px; 
-    background-color: white;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
-    text-align: center;
-}
-
 #info-box {
     position: absolute;
     top: 10px;
