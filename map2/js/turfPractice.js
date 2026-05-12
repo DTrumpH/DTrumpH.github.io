@@ -28,11 +28,11 @@ export function turfFunctions(map) {
   
   const distance = turf.distance(myPoint, myPoint2, {units: 'meters'})
   const roundedDist = Math.round(distance * 100) / 100
-  console.log(`Distance between Jakob Hurt and Pond: ${roundedDist} meters`)
+  console.log(`Distance between Jakob Hurt and pond: ${roundedDist} meters`)
 
   // area
   const area = turf.area(myPolygon)
-  console.log(`Park Area: ${Math.round(area)} square meters`)
+  console.log(`Park area: ${Math.round(area)} square meters`)
 
   // within poly
   const points = turf.points(pointsCollection)
